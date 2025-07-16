@@ -1,3 +1,4 @@
+// pin mappings
 const int bell = 5;
 const int bail = 4;
 const int sandMomentary = 3;
@@ -7,6 +8,8 @@ const int autoBrake = A0;
 const int indyBrake = A1;
 const int throttle = A3;
 const int reverser = A4;
+
+// initializing udp variables
 int sandState = 0;
 int bellStateUDP = 0;
 int hornStateUDP = 0;
@@ -203,6 +206,14 @@ void loop() {
     bellStateUDP = 1;
   } else {
     bellStateUDP = 0;
+  }
+
+  // logic only works for run8 atm (and tsc since I fixed the code over in the c# script)
+  int bailState = digitalRead(bail);
+  if (bailState == LOW) {
+    independentBrakeBailUDP = 1;
+  } else {
+    independentBrakeBailUDP = 0;
   }
 
   /*
