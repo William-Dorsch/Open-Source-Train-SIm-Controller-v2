@@ -5,6 +5,9 @@ After 9 months I finally made a custom train sim controller I'm happy with, so h
 Attached in this repo are both the files (stl and fbx) of my current design, as well as the scripts neccesary to make them work
 (and perhaps documentation on how to make your own scripts for your own projects in the future)
 
+### PRELIMINARY BUILD GUIDE ###
+https://docs.google.com/document/d/1KSgfsF_5sMxbXlPAzv2AgdFZr4h-Y06j3LuT_041sC8/edit?tab=t.0#heading=h.wbio56opicyw<br>
+
 # Hardware
 You can either use my current design (based off of a North American desktop setup), or venture into CAD and make your own
 FOr my design, you will need the following materials:<br/>
