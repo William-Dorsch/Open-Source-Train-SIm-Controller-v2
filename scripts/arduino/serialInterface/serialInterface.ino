@@ -8,6 +8,7 @@ const int autoBrake = A0;
 const int indyBrake = A1;
 const int throttle = A3;
 const int reverser = A4;
+const int horn = 0;
 
 // initializing udp variables
 int sandState = 0;
@@ -46,6 +47,7 @@ void setup() {
   pinMode(indyBrake, INPUT);
   pinMode(throttle, INPUT);
   pinMode(reverser, INPUT);
+  pinMode(horn, INPUT_PULLUP);
   Serial.begin(9600);
 }
 
@@ -193,7 +195,7 @@ void loop() {
   }
 
   // horn logic
-  int hornState = digitalRead(bail);
+  int hornState = digitalRead(horn);
   if (hornState == LOW) {
     hornStateUDP = 1;
   } else {
