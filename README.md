@@ -30,7 +30,7 @@ You only need to print 1 of all the parts, EXCEPT FOR THE FOLLOWING<br/>
 - 3x potentiometerHolderTall.stl<br/>
 - 2x reverserAxleSupport<br/>
 
-You'll also need to print a reverser, such as this one: https://makerworld.com/en/models/919480-locomotive-reverser#profileId-881394<br/>
+You'll also need to print a reverser, such as this one: (print at 95% scale) https://makerworld.com/en/models/919480-locomotive-reverser#profileId-881394<br/>
 (huge credit to this design it is exactly what I was looking for)<br/>
 And you'll need 2 printed m5 bolts to allow the throttle and independent brake handles to pivot, such as: https://www.printables.com/model/48364-3d-printable-m5-hex-screw-and-nut
 
