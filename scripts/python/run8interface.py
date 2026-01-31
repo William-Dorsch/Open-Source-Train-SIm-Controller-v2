@@ -22,7 +22,11 @@ try:
         line
         #if ser.in_waiting > 0:  # Check if data is available #removing this fixed not having inputs for some reason
         line = ser.readline().decode('utf-8').strip()
-        #print("Received:", line)  
+        #print("Received:", line)  # debugging purposes
+
+        # THIS STATEMENT BREAKS STUFF IF IT ISNT HERE
+        if not line:  
+            continue  # ignore empty lines
 
         sections = line.split(',')
         for section in sections:
