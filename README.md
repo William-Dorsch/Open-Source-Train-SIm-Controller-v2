@@ -12,6 +12,7 @@ https://docs.google.com/document/d/1KSgfsF_5sMxbXlPAzv2AgdFZr4h-Y06j3LuT_041sC8/
 You can either use my current design (based off of a North American desktop setup), or venture into CAD and make your own
 FOr my design, you will need the following materials:<br/>
 - Arduino Leonardo (or anything that has the usb serial whatever interface) <br/>
+- Breadboard, jumper wires, other miscellanious wires to connect things (i use 30 gauge, anything smaller tha 18 could probably work) <br/>
 - 50 #4 1/2" screws to be safe (you can buy two boxes of 25 from Ace for 5 bucks<br/>
 - 1 6mm ball bearing <br/>
 - a couple pen springs will need to be sacrificed, 13mm length<br/>
