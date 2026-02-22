@@ -19,26 +19,22 @@ try:
     print(f"Listening on {SERIAL_PORT} at {BAUD_RATE} baud...")
     
     while True:
-        line
-        #if ser.in_waiting > 0:  # Check if data is available #removing this fixed not having inputs for some reason
-        line = ser.readline().decode('utf-8').strip()
-        #print("Received:", line)  # debugging purposes
+       line = ser.readline().decode('utf-8').strip()
 
-        # THIS STATEMENT BREAKS STUFF IF IT ISNT HERE
         if not line:  
-            continue  # ignore empty lines
+            continue  # ignore empty linesd
 
-        sections = line.split(',')
-        for section in sections:
-            key, value = section.split(':')
+        print("Received:", line)
+
+        try:
+            sections = line.split(',')
             for section in sections:
-                if ':' not in section:
-                    continue  # skip invalid or empty sections
-                    key, value = section.split(':', 1)
-                    try:
-                        parsed_data[key.strip()] = int(value.strip())
-                    except ValueError:
-                        continue
+                key, value = section.split(':')
+                parsed_data[key] = int(value)  # Convert value to integer
+        except ValueError:
+            print("Malformed line, skipping:", line)
+            continue
+            
         HR = parsed_data.get("HR", 0)
         BL = parsed_data.get("BL", 0)
         SD = parsed_data.get("SD", 0)
