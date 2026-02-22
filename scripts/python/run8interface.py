@@ -31,7 +31,14 @@ try:
         sections = line.split(',')
         for section in sections:
             key, value = section.split(':')
-            parsed_data[key] = int(value)  # Convert value to integer
+            for section in sections:
+                if ':' not in section:
+                    continue  # skip invalid or empty sections
+                    key, value = section.split(':', 1)
+                    try:
+                        parsed_data[key.strip()] = int(value.strip())
+                    except ValueError:
+                        continue
         HR = parsed_data.get("HR", 0)
         BL = parsed_data.get("BL", 0)
         SD = parsed_data.get("SD", 0)
